@@ -20,6 +20,7 @@ public class UserService {
         return list();
     }
 
+    // Método para listar todos os usuários, ordenados por nome e idade
     public List<User> list() {
        Sort sort = Sort.by("nome").descending().and(Sort.by("idade"));
        return userRepository.findAll(sort);
